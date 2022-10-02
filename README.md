@@ -7,7 +7,9 @@
     /nologin.asp
     /Logout.asp
 
-release里面的插件只有transmission & aria2，通过breed刷入，成功以后登录到系统管理，固件配置->2个都重置以下，恢复出厂设置(NVRAM和etc/storage)
+release里面的插件只有transmission & aria2，通过breed刷入
+
+成功以后登录到系统管理，固件配置->点2个都重置，恢复出厂设置(NVRAM和etc/storage)
 
 浏览器(按下ctrl，然后按F5)，清空缓存，否则菜单会错位！
 
