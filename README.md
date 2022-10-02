@@ -7,7 +7,8 @@
     /nologin.asp
     /Logout.asp
 
-
+截图
+![Alt text](https://raw.githubusercontent.com/xtr3mz/padavan/master/screenshot.jpg)
 
 以下原文
 
