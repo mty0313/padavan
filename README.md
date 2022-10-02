@@ -1,3 +1,16 @@
+修改文件位置：4个文件
+
+/trunk/user/www/n56u_ribbon_fixed
+
+    /state.js（中间菜单，和末尾mobilestyle ）
+    /bootstrap/main.css (末尾 media screen)
+    /nologin.asp
+    /Logout.asp
+
+
+
+以下原文
+
 ![CI](https://github.com/hanwckf/rt-n56u/workflows/CI/badge.svg)
 ![GitHub All Releases](https://img.shields.io/github/downloads/hanwckf/rt-n56u/total)
 [![release](https://img.shields.io/github/release/hanwckf/rt-n56u.svg)](https://github.com/hanwckf/rt-n56u/releases)
