@@ -18,19 +18,16 @@
 <script>
 <% login_state_hook(); %>
 
-function initial(){
-  document.getElementById("logined_ip_str").innerHTML = login_ip_str();
-}
+function initial(){$j("#ip").html(login_ip_str());}
 </script>
 </head>
 
 <body onload="initial()">
-<center>
 	<div id="logo"></div>
-    <div class="alertX">
-        <p><#login_hint1#> <span id="logined_ip_str"></span></p>
-        <p><#login_hint2#></p>
-    </div>
-</center>
+	<div class="alertX">
+		<h3><#login_hint1#></h3>
+		<p><span id="ip"></span></p>
+		<p><#login_hint2#></p>
+	</div>
 </body>
 </html>
