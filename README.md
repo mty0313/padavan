@@ -15,8 +15,8 @@ release只支持Newifi3 D2, 插件只有transmission & aria2，通过breed刷入
 
 浏览器(按下ctrl，然后按F5)，清空缓存，否则菜单会错位！
 
-截图
-![Alt text](https://raw.githubusercontent.com/xtr3mz/padavan/master/screenshot.jpg)
+截图v1.1
+![Image text](https://github.com/xtr3mz/padavan/raw/master/%E6%8D%95%E8%8E%B7.jpg)
 
 以下原文
 
