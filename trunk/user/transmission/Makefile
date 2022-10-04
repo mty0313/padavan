@@ -67,4 +67,7 @@ else
 	rm -f $(INSTALLDIR)/usr/share/transmission/web/LICENSE
 endif
 	$(ROMFSINST) $(THISDIR)/install/usr/bin/transmission-daemon /usr/bin/transmission-daemon
+	$(ROMFSINST) $(THISDIR)/install/usr/bin/transmission-remote /usr/bin/transmission-remote
+	cp -fP $(CONFIG_CROSS_COMPILER_ROOT)/mipsel-linux-uclibc/sysroot/lib/libstdc*.so* $(ROMFSDIR)/lib
+	rm $(ROMFSDIR)/lib/libstdc*.so* .py
 	$(ROMFSINST) -p +x /usr/bin/transmission.sh
