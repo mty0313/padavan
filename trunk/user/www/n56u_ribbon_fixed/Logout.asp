@@ -20,11 +20,13 @@ function initial(){
 </script>
 </head>
 <body onload="initial()">
+<center>
 	<div id="logo"></div>
 	<div class="alertX">
                 <h2><#logoutmessage#></h2>
                 <p><#Not_authpage_login_again#></p>
 	</div>
 	</div>
+</center>
 </body>
 </html>
