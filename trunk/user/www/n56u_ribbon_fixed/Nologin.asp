@@ -23,11 +23,13 @@ function initial(){$j("#ip").html(login_ip_str());}
 </head>
 
 <body onload="initial()">
+<center>
 	<div id="logo"></div>
 	<div class="alertX">
 		<h3><#login_hint1#></h3>
 		<p><span id="ip"></span></p>
 		<p><#login_hint2#></p>
 	</div>
+<center>
 </body>
 </html>
