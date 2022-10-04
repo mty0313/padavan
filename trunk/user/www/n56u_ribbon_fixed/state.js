@@ -487,13 +487,18 @@ var menuL2=[
 /* plugin menu 插件菜单 */
 if (found_app_aria()){
 	var mx={"title":"Aria","link":"./ariaweb/index.html","sub":"plugin"};//json格式
-	menuL2.push(mx);//必须写
+	menuL2.push(mx);
+}
+if (found_app_torr()){
+	var linkt="javascript:window.open('//"+location.hostname+":<% nvram_get_x("", "trmd_rport"); %>/transmission/web/');void(0);";
+	var mx={"title":"Transmission","link":linkt,"sub":"plugin"};
+	menuL2.push(mx);
 }
 if (found_app_scutclient()){
-	var mx={"title":"<#menu5_13#>","link":"scutclient.asp","sub":"plugin"};//json格式
+	var mx={"title":"<#menu5_13#>","link":"scutclient.asp","sub":"plugin"};
 	var mx2=[mx,{"title":"log","link":"scutclient_log.asp"}];//多个页面
-	menuL2.push(mx);//必须写
-	tabM.push(mx2);//必须写
+	menuL2.push(mx);
+	tabM.push(mx2);
 }
 if (found_app_dnsforwarder()){
 	var mx={"title":"<#menu5_15#>","link":"dns-forwarder.asp","sub":"plugin"};
