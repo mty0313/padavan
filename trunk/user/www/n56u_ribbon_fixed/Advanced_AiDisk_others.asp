@@ -797,6 +797,7 @@ function done_validating(action){
                                                <a href="javascript:on_rpc_link();" id="web_rpc_link"><#WebControl#></a>
                                             </td>
                                         </tr>
+					<tr><td colspan="2">远程帐号及密码: transmission</td></tr>					
                                     </table>
 
                                     <table width="100%" id="tbl_aria" cellpadding="4" cellspacing="0" class="table" style="display:none;">
