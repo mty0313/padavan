@@ -1,3 +1,5 @@
+已增加自动编译
+
 修改文件位置：4个文件
 
 /trunk/user/www/n56u_ribbon_fixed
@@ -7,13 +9,11 @@
     /nologin.asp
     /Logout.asp
 
-bug修复：transmission缺少libstdc,已添加
-
-release只支持Newifi3 D2, 插件只有transmission & aria2，通过breed刷入
-
+release只支持Newifi3 D2, 插件只有aria2，通过breed刷入
+配置文件：（带中文说明）/padavan/trunk/configs/templates/NEWIFI3.config
 成功以后登录到系统管理，固件配置->点2个都重置，恢复出厂设置(NVRAM和etc/storage)
 
-浏览器(按下ctrl，然后按F5)，清空缓存，否则菜单会错位！
+浏览器(按下ctrl+F5)，清空缓存，否则菜单会错位！
 
 截图v1.1
 ![Image text](https://github.com/xtr3mz/padavan/raw/master/%E6%8D%95%E8%8E%B7.jpg)
