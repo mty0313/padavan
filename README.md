@@ -1,11 +1,17 @@
 本人newifi3 刷过最好的固件，稳定，易用（比openwrt和pandorabox更好用，插件除外）
-本项目添加手机版页面，修改aria配置（已增加自动编译）
+
+本项目特点：（已增加自动编译）
+0、基于padavan 最后一版 (旧内核)
+1、有手机页面
+2、修改aria配置
 
 提示：
 1、release只支持Newifi3 D2, 插件只有aria2（已提前配置好）
 配置文件：（带中文说明）/padavan/trunk/configs/templates/NEWIFI3.config
+
   未刷过padavan的：通过breed刷入
   之前刷过padavan的：恢复出厂设置(后登录到系统管理，固件配置->重置 NVRAM和etc/storage)，通过更新 刷入
+  
 2、浏览器(按下ctrl+F5)，清空缓存，否则菜单会错位！
 
 截图v1.1
