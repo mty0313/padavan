@@ -1,6 +1,17 @@
-已增加自动编译
+本人newifi3 刷过最好的固件，稳定，易用（比openwrt和pandorabox更好用，插件除外）
+本项目添加手机版页面，修改aria配置（已增加自动编译）
 
-修改文件位置：4个文件
+提示：
+1、release只支持Newifi3 D2, 插件只有aria2（已提前配置好）
+配置文件：（带中文说明）/padavan/trunk/configs/templates/NEWIFI3.config
+  未刷过padavan的：通过breed刷入
+  之前刷过padavan的：恢复出厂设置(后登录到系统管理，固件配置->重置 NVRAM和etc/storage)，通过更新 刷入
+2、浏览器(按下ctrl+F5)，清空缓存，否则菜单会错位！
+
+截图v1.1
+![Image text](https://github.com/xtr3mz/padavan/raw/master/%E6%8D%95%E8%8E%B7.jpg)
+
+手机版页面，手动修改文件方法：4个文件
 
 /trunk/user/www/n56u_ribbon_fixed
 
@@ -9,16 +20,8 @@
     /nologin.asp
     /Logout.asp
 
-release只支持Newifi3 D2, 插件只有aria2，通过breed刷入
-配置文件：（带中文说明）/padavan/trunk/configs/templates/NEWIFI3.config
-成功以后登录到系统管理，固件配置->点2个都重置，恢复出厂设置(NVRAM和etc/storage)
 
-浏览器(按下ctrl+F5)，清空缓存，否则菜单会错位！
-
-截图v1.1
-![Image text](https://github.com/xtr3mz/padavan/raw/master/%E6%8D%95%E8%8E%B7.jpg)
-
-以下原文
+原文：
 
 ![CI](https://github.com/hanwckf/rt-n56u/workflows/CI/badge.svg)
 ![GitHub All Releases](https://img.shields.io/github/downloads/hanwckf/rt-n56u/total)
@@ -38,12 +41,6 @@ Contributors of this project are not responsible for what happens next.
 * Feed the device with the system image file (Follow instructions of updating your current system)
 * Perform factory reset
 * Open web browser on http://my.router to configure the services
-
-### Contribution guidelines ###
-
-* To be completed
-
-***
 
 ### 特别说明 ###
 * 汉化字典来自：https://github.com/gorden5566/padavan
@@ -88,40 +85,27 @@ Contributors of this project are not responsible for what happens next.
 >- [smartdns](https://github.com/pymumu/smartdns) ```CONFIG_FIRMWARE_INCLUDE_SMARTDNS```
 
 - 已适配除官方适配外的以下机型
->- PSG1208
->- PSG1218
+>- PSG1208 >- PSG1218
 >- 5K-W20 (USB)
 >- OYE-001 (USB)
->- NEWIFI-MINI (USB)
->- MI-MINI (USB)
->- MI-3 (USB)
->- MI-3C
->- MI-4
->- MI-R3G (USB)
->- MI-R4A
->- MI-R3P (USB)
->- HC5661A
->- HC5761A (USB)
->- HC5861B
+>- NEWIFI3 (USB) >- NEWIFI-MINI (USB) >- MI-MINI (USB) >- MI-3 (USB)
+>- MI-NANO >- MI-3C >- MI-4 >- MI-R3G (USB) >- MI-R4A >- MI-R3P (USB) >- RM2100
+>- HC5661A >- HC5761A (USB) >- HC5861B
 >- 360P2 (USB)
->- MI-NANO
->- MZ-R13
->- MZ-R13P
+
+>- MZ-R13 >- MZ-R13P
 >- RT-AC1200GU (USB)
 >- XY-C1 (USB)
 >- WR1200JS (USB)
->- NEWIFI3 (USB)
+
 >- B70 (USB)
 >- A3004NS (USB)
->- K2P
->- K2P-USB (USB)
->- JCG-836PRO (USB)
->- JCG-AC860M (USB)
->- DIR-882 (USB)
->- DIR-878
+>- K2P >- K2P-USB (USB)
+>- JCG-836PRO (USB) >- JCG-AC860M (USB)
+>- DIR-882 (USB) >- DIR-878
 >- MR2600 (USB)
 >- WDR7300
->- RM2100
+
 >- CR660x (CR6606, CR6608, CR6609)
 >- R2100
 >- JCG-Y2 (USB)
