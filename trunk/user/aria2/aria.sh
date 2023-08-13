@@ -61,8 +61,9 @@ rpc-allow-origin-all=true
 
 ### Common
 dir=$DIR_DL1
-max-download-limit=0
-max-overall-download-limit=0
+###下载上限 不死机
+max-download-limit=3300K
+max-overall-download-limit=3300K
 disable-ipv6=false
 
 ### File
@@ -74,7 +75,9 @@ allow-overwrite=false
 auto-file-renaming=true
 
 ### Bittorent
-bt-enable-lpd=false
+####默认打开dht
+bt-enable-lpd=true
+
 #bt-lpd-interface=eth2.2
 bt-max-peers=50
 bt-max-open-files=100
@@ -84,9 +87,11 @@ enable-dht=true
 #enable-dht6=false
 enable-peer-exchange=true
 seed-ratio=1.5
-#seed-time=60
-max-upload-limit=0
-max-overall-upload-limit=0
+###做种时间
+seed-time=60
+###上限
+max-upload-limit=50K
+max-overall-upload-limit=100K
 
 ### FTP/HTTP
 ftp-pasv=true
@@ -98,6 +103,8 @@ max-concurrent-downloads=3
 max-connection-per-server=8
 min-split-size=1M
 check-certificate=false
+###默认tracker
+bt-tracker=http://1337.abcvg.info:80/announce,http://tracker.openbittorrent.com:80/announce,http://tracker.opentrackr.org:1337/announce,https://opentracker.cc:443/announce,udp://exodus.desync.com:6969/announce,udp://explodie.org:6969/announce,udp://torrentclub.space:6969/announce,udp://torrents.artixlinux.org:6969/announce,udp://tr.cili001.com:8070/announce,udp://tracker.beeimg.com:6969/announc,udp://tracker.dler.com:6969/announce,udp://tracker.dler.org:6969/announce,udp://tracker.farted.net:6969/announce,udp://tracker.internetwarriors.net:1337/announce,https://1337.abcvg.info:443/announce,https://abir0dev.github.io:443/announce,https://chihaya-heroku.120181311.xyz:443/announce,udp://tracker.moeking.me:6969/announce,udp://tracker.publictracker.xyz:6969/announce,http://tracker1.itzmx.com:8080/announce,http://tracker2.dler.org:80/announce,http://tracker4.itzmx.com:2710/announce,udp://tracker.monitorit4.me:6969/announce,udp://tracker.openbittorrent.com:6969/announce,udp://tracker.openbittorrent.com:80/announce,udp://tracker.opentrackr.org:1337/announce,udp://www.torrent.eu.org:451/announce,udp://xxx.xxtor.com:3074/announce
 
 ### Log
 log=$DIR_CFG/aria2.log
