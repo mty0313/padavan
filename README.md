@@ -11,7 +11,7 @@
 1、release 只支持Newifi3 D2, 插件只有aria2(配置文件：/padavan/trunk/configs/templates/NEWIFI3.config)
 
   * 之前未刷过padavan的：通过breed刷入  
-  * 之前刷过padavan的：先恢复出厂设置，后登录到系统管理，固件配置->重置 （NVRAM和etc/storage)，再通过更新 刷入
+  * 之前刷过padavan的：先恢复出厂设置，后登录到系统管理，配置->重置 （NVRAM和etc/storage)，再通过 固件升级 刷入
   
 2、浏览器(按下ctrl+F5)，清空缓存，否则菜单会错位！
 
