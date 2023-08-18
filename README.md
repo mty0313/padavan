@@ -1,7 +1,8 @@
-本人newifi3D2，pandorabox 是刷过最好的固件，稳定，易用，时间长不卡，文件传输快（比openwrt和pandorabox更好用，插件除外）
+padavan比openwrt和pandorabox更好用，另外俩固件经常出问题找不到毛病，上手费劲
+padavan 稳定，易用，基本不用设置，设置优化好
 
 #### 本项目特点：  
-* 基于padavan 最后一版 (旧内核)
+* 基于padavan 3.4 最后一版，稳定 (bug很少)
 * 有手机页面
 * 修改aria配置（提升下载速度，无需再配置）
 * Fork 本项目以后看 [自动编译教程](https://zhuanlan.zhihu.com/p/94402324) ，用github服务器编译，27分钟左右 
