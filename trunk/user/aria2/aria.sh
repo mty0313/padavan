@@ -62,8 +62,8 @@ rpc-allow-origin-all=true
 ### Common
 dir=$DIR_DL1
 ###下载上限 不死机
-max-download-limit=3300K
-max-overall-download-limit=3300K
+max-download-limit=2300K
+max-overall-download-limit=2300K
 disable-ipv6=false
 
 ### File
