@@ -1,6 +1,8 @@
 padavan比openwrt和pandorabox更好用，另外俩固件经常出问题找不到毛病，上手费劲
 padavan 稳定，易用，基本不用设置，设置优化好
 
+注意:newifi3 d2 需要设置2.4G为20hz,否则经常断线(应该是wifi重启或丢失)
+
 #### 本项目特点：  
 * 基于padavan 3.4 最后一版，稳定 (bug很少)
 * 有手机页面
