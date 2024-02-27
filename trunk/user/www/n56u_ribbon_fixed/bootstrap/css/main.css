@@ -662,7 +662,9 @@ textarea[readonly] {
 .quickmenu .badge{margin:0 10px 0 -30px}
 .big-icons,.big-ss {width: 35px !important;height: 35px !important;background-size:35px;}
 #iconInternet{background-position:0 0 !important}
-#iconRouter{background-position:0 -165px !important}
 #iconClient{background-position:0 -82px !important}
+#iconRouter{background-position:0 -165px !important}
+#deviceIcon_0{background-position:0 -250px !important}
 #iconUSBdisk0{background-position:0 -333px !important}
+#iconPrinter0{background-position:0 -455px !important}
 }
