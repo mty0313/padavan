@@ -170,6 +170,13 @@ function done_validating(action){
                                                 </div>
                                             </td>
                                         </tr>
+					<tr>
+                                            <td colspan="2">
+· 如重复打印的关闭打印机设置里的"启用双向支持"<br />
+· 可能需要禁用USB3.0 <br />
+· 手机用PrintHand打印时, 多试几个驱动(如:P1008用P1006驱动才可用)<br />
+· HP打印机发送固件的脚本来自<a href="https://www.right.com.cn/forum/thread-5452802-1-1.html">turboYI</a></td>
+                                        </tr>
                                         <tr>
                                             <td colspan="2">
                                                 <center><input class="btn btn-primary" style="width: 219px" onclick="applyRule();" type="button" value="<#CTL_apply#>" /></center>
