@@ -200,6 +200,8 @@ func_fill()
 
 	script_start="$dir_storage/start_script.sh"
 	script_started="$dir_storage/started_script.sh"
+	script_hpprinter="$dir_storage/hpprinter_script.sh"
+ 
 	script_shutd="$dir_storage/shutdown_script.sh"
 	script_postf="$dir_storage/post_iptables_script.sh"
 	script_postw="$dir_storage/post_wan_script.sh"
@@ -272,17 +274,96 @@ sync && echo 3 > /proc/sys/vm/drop_caches
 #iwpriv rai0 set AssocReqRssiThres=-80
 
 # Mount SATA disk
-#mdev -s
+mdev -s
 
 #wing <HOST:443> <PASS>
 #wing 192.168.1.9:1080
 #ipset add gfwlist 8.8.4.4
 
+# 启动时如果检查到了HP打印机，就安装固件 turboYI 20210906
+sed -i 's/\/sbin\/mdev_lp/\/etc\/storage\/hpprinter_script.sh/' /etc/mdev.conf
+if [ -c /dev/usb/lp0 ]; then
+    devpath=`find /sys/devices/platform/ehci-platform/ -name 'lp0' | grep 'usb/lp0'`
+    if [ $? = 0 ]; then
+        /etc/storage/hpprinter_script.sh usb/lp0 add $devpath
+    fi
+fi
 
 EOF
 		chmod 755 "$script_started"
 	fi
-
+ 
+	# create HP printer script
+	if [ ! -f "$script_hpprinter" ] ; then
+		cat > "$script_hpprinter" <<EOF
+#!/bin/sh
+# 准备打印机热插拔时安装固件(从网上下载固件) turboYI 20210906
+set -e
+#固件下载地址
+HPLJSITE=http://oleg.wl500g.info/hplj
+LOGFILE=/tmp/syslog.log
+FIRMWARE=
+if [ $# -eq 3 ]; then
+    #这里用于开机时调用
+    DEVNAME=$1
+    ACTION=$2
+    DEVD=$3/../../..
+else
+    DEVD=/sys${DEVPATH}/../../..
+fi
+if [ -f $DEVD/product ]; then
+    product=`cat $DEVD/product`
+    vid=`cat $DEVD/idVendor`
+    pid=`cat $DEVD/idProduct`
+    case $vid-$pid in
+    03f0-0517)
+        FIRMWARE=sihp1000.dl
+        ;;
+    03f0-1317)
+        FIRMWARE=sihp1005.dl
+        ;;
+    03f0-4117)
+        FIRMWARE=sihp1018.dl
+        ;;
+    03f0-2b17)
+        FIRMWARE=sihp1020.dl
+        ;;
+    03f0-3d17)
+        FIRMWARE=sihpP1005.dl
+        ;;
+    03f0-3e17)
+        FIRMWARE=sihpP1006.dl
+        ;;
+    03f0-4817)
+        FIRMWARE=sihpP1005.dl
+        ;;
+    03f0-4917)
+        FIRMWARE=sihpP1006.dl
+        ;;
+    03f0-3f17)
+        FIRMWARE=sihpP1505.dl
+        ;;
+    esac
+    if [ $FIRMWARE ]; then
+        if [ ! -f /etc/storage/$FIRMWARE ]; then
+            curl -o /etc/storage/$FIRMWARE $HPLJSITE/$FIRMWARE
+        fi
+        if [ -c /dev/$DEVNAME -a $ACTION = 'add' ]; then
+           echo "$(date "+%Y-%m-%d %H:%M:%S") : Sending $product firmware to $DEVNAME" > $LOGFILE
+           cat /etc/storage/$FIRMWARE > /dev/$DEVNAME
+           echo "$(date "+%Y-%m-%d %H:%M:%S") : done." >> $LOGFILE
+        fi
+    fi
+fi
+#调用Padavan原处理程序
+if [ $# -eq 2 ]; then
+  /sbin/mdev_lp $MDEV $ACTION
+fi
+  
+EOF
+		chmod 755 "$script_hpprinter"
+	fi
+ 
 	# create shutdown script
 	if [ ! -f "$script_shutd" ] ; then
 		cat > "$script_shutd" <<EOF
