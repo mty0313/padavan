@@ -3,10 +3,10 @@ padavan 稳定，易用，基本不用设置，设置优化好
 
 注意:newifi3 d2 需要设置2.4G为20hz,否则经常断线(应该是wifi重启或丢失)
 
-#### 本项目特点：  
+#### 特点：  
 * 基于padavan 3.4
 * 有手机页面
-* 修改aria配置（提升下载速度，无需再配置）
+* 优化aria配置（提升下载速度，无需再配置）
 * 启动时默认挂载USB存储
 * 增加惠普HP老式GDI打印机的支持
 
@@ -20,6 +20,8 @@ Fork 本项目以后看 [自动编译教程](https://zhuanlan.zhihu.com/p/944023
   * 之前刷过padavan的：先恢复出厂设置，后登录到系统管理，配置->重置 （NVRAM和etc/storage)，再通过 固件升级 刷入
   
 2、浏览器(按下ctrl+F5)，清空缓存，否则菜单会错位！
+
+aria默认设置: 修改 /padavan/blob/master/trunk/user/aria2/aria.sh
 
 ### 截图v1.1 ###
 ![Image text](https://github.com/xtr3mz/padavan/raw/master/%E6%8D%95%E8%8E%B7.jpg)
