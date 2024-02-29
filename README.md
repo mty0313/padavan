@@ -8,10 +8,10 @@ padavan 稳定，易用，基本不用设置，设置优化好
 * 有手机页面
 * 修改aria配置（提升下载速度，无需再配置）
 * Fork 本项目以后看 [自动编译教程](https://zhuanlan.zhihu.com/p/94402324) ，用github服务器编译，27分钟左右 
-
+* 增加惠普HP老式GDI打印机的支持
 ### 提示： ###
 
-1、release 只支持Newifi3 D2, 插件只有aria2(配置文件：/padavan/trunk/configs/templates/NEWIFI3.config)
+1、release 的newifi3/zte 8820s的插件只有aria2(自己修改配置文件：/padavan/trunk/configs/templates/你的路由型号.config)
 
   * 之前未刷过padavan的：通过breed刷入  
   * 之前刷过padavan的：先恢复出厂设置，后登录到系统管理，配置->重置 （NVRAM和etc/storage)，再通过 固件升级 刷入
