@@ -4,11 +4,14 @@ padavan 稳定，易用，基本不用设置，设置优化好
 注意:newifi3 d2 需要设置2.4G为20hz,否则经常断线(应该是wifi重启或丢失)
 
 #### 本项目特点：  
-* 基于padavan 3.4 最后一版，稳定 (bug很少)
+* 基于padavan 3.4
 * 有手机页面
 * 修改aria配置（提升下载速度，无需再配置）
-* Fork 本项目以后看 [自动编译教程](https://zhuanlan.zhihu.com/p/94402324) ，用github服务器编译，27分钟左右 
+* 启动时默认挂载USB存储
 * 增加惠普HP老式GDI打印机的支持
+
+Fork 本项目以后看 [自动编译教程](https://zhuanlan.zhihu.com/p/94402324) ，用github服务器编译，27分钟左右
+  
 ### 提示： ###
 
 1、release 的newifi3/zte 8820s的插件只有aria2(自己修改配置文件：/padavan/trunk/configs/templates/你的路由型号.config)
